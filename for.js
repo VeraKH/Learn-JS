@@ -32,3 +32,51 @@ for (let i = 1; i<range; i++) {
     resultNew = range % i
         console.log(`The remainder of ${range} divided by ${i} is ${resultNew}`);
 };
+
+console.log("Example 4 - Multiplication table for 5 ");
+const multNumber = 5;
+for (let i = 1; i<=10; i++) {
+    let result = multNumber * i;
+    console.log(`${multNumber} * ${i} =`, result);
+}
+
+
+console.log("Example 4:  Break & for");
+
+for (let i = 1; i<range; i++) {
+    resultNew = range % i
+    if (resultNew % i === 2){
+        break;
+    }
+    console.log(`The remainder of ${range} divided by ${i} is ${resultNew}`);
+}
+console.log("Loop ended");
+
+console.log("Example 5:  Break & for");
+for (let i = 0; i<5; i++) {
+    if (i === 3){
+        console.log(`Found 3`);
+        break;
+    }
+    console.log(`Step ${i}`);
+}
+console.log("Loop ended");
+
+//statement skips the current iteration of the loop and proceeds with the next one.
+console.log("Topic `continue`. Example 1");
+for (let i = 0; i<5; i++) {
+    if (i === 3){
+        console.log(`HEY, I've found 3!`);
+        continue;
+    }
+    console.log(`Step ${i}`);
+}
+console.log("Loop ended");
+
+console.log("Topic `continue`. Example 2 - Skip even numbers");;
+for (let i = 1; i<10; i++) {
+    if (i % 2 === 0){
+        console.log(`Even number: ${i}`);
+        continue;
+    }
+}
