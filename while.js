@@ -80,4 +80,17 @@ console.log("Practical Example: Asking for a password")
 //     password = prompt("Enter a password longer than 4 characters", "");
 // } while (password.length <= 5);
 
+console.log("Task 1: Counting Down")
+
+let taskOne = 10;
+while (taskOne >= 0){
+    console.log(taskOne--);
+}
+
+console.log("Task 2: Password Validation")
+let password = "";
+do{
+    password = prompt(`Enter a valid password that is more than 6 characters!`);
+} while (password.length < 6);
+
 

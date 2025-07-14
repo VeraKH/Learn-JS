@@ -30,3 +30,4 @@ console.log(typeof string);
 console.log(typeof boolean);
 console.log(typeof symbol);
 console.log(typeof null);
+
