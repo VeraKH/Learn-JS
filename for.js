@@ -23,8 +23,12 @@ for (let i = 1; i<=50; i++) {
 }
 console.log(sumTask);
 
+console.log("Practice 4: Calculate the factorial of a number (e.g., 5) using a `for` loop");
+// Task 8:
+const num3 = 5;
+
 //Create a multiplication table for any number (e.g., 7) using a `for` loop.
-console.log("Practice 4: Multiplication Table");
+console.log("Practice 5: Multiplication Table");
 let multResult = 1;
 const multTo = 7
 for (i = 1; i<=10; i++) {
@@ -32,7 +36,7 @@ for (i = 1; i<=10; i++) {
     console.log(`${i}*${multTo}=${multResult}`);
 }
 
-console.log("Practice 5: Odd numbers only");
+console.log("Practice 6: Odd numbers only");
 let resultTask;
 for (i = 1; i<=20; i++) {
     if (i % 2 !== 0) {
@@ -40,7 +44,7 @@ for (i = 1; i<=20; i++) {
     }
 }
 
-console.log("Practice 6: Calculating the sum of numbers up to a target value")
+console.log("Practice 7: Calculating the sum of numbers up to a target value")
 
 const result = 10;
 let sum = 0;
@@ -50,7 +54,7 @@ for (let i = 1; i<=result; i++){
 console.log("Sum: ", sum);
 
 
-console.log("Practice 7:  Using modulo to find remainders");
+console.log("Practice 8:  Using modulo to find remainders");
 
 let range = 10;
 let resultNew;
@@ -65,7 +69,7 @@ for (let i = 1; i<range; i++) {
         console.log(`The remainder of ${range} divided by ${i} is ${resultNew}`);
 };
 
-console.log("Practice 8 - Multiplication table for 5 ");
+console.log("Practice 9 - Multiplication table for 5 ");
 const multNumber = 5;
 for (let i = 1; i<=10; i++) {
     let result = multNumber * i;
@@ -123,7 +127,7 @@ for (let i = 1; i<10; i++) {
     }
 }
 
-console.log("Topic `Nested Loops`. Example 1");
+console.log("Topic `Nested Loops`. Practice: 1");
 for (let day = 1; day<=3; day++) {
     for (let lesson = 1; lesson<=3; lesson++) {
         console.log(`For day ${day} there is lesson ${lesson}`)
@@ -165,3 +169,13 @@ for (let multNumber = 1; multNumber<=5; multNumber++) {
         console.log(`${multNumber} * ${i} = ${resultTask7}`);
     }
 }
+
+
+// Task 10: Draw a checkerboard pattern using nested loops
+
+
+// Task 11: Find the smallest number in a set of numbers (without using arrays)
+const num5 = 45;
+const num6 = 8;
+const num7 = 23;
+const num8 = 78;
