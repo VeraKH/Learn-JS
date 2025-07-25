@@ -69,3 +69,4 @@ console.log("Object.values():", Object.values(person))
 
 console.log("Object.entries():", Object.entries(person))
 
+

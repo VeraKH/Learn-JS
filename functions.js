@@ -58,3 +58,48 @@ functionExpression(10,40);
 
 
 console.log("3. ARROW FUNCTIONS")
+
+const arrowFunctiom = (a, b) => a + b
+
+console.log(arrowFunctiom(10, 20));
+
+console.log("4. Arrow function with multiple lines")
+
+const arrowFunctionMulti = (a, b) => {
+    const sum = a + b;
+    return sum;
+}
+
+console.log(arrowFunctionMulti(20, 20));
+
+console.log("5. Callback functions")
+
+function callbackFunction(a,b) {
+    return a + b;
+}
+
+function functionToCallBack(a, b, callbackFunction) {
+    return callbackFunction(a, b);
+}
+
+let resultCallBack = functionToCallBack(10, 20, callbackFunction);
+console.log(resultCallBack);
+
+console.log("6. Function to convert Fahrenheit to Celsius")
+const convertToCelsius = function (temp) {
+    return (temp - 32) * 5 / 9;
+}
+
+console.log(convertToCelsius(32));
+
+console.log("7. Polindromes")
+const polindromes = function (str) {
+    let strReverse = str.split('').reverse().join('');
+    console.log(strReverse)
+
+    if (str === str.split('').reverse().join('')) {
+        return true;
+    } else {
+        return false;
+    }
+}
