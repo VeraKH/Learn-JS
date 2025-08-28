@@ -18,6 +18,7 @@ name = "Vera";
 
 // 2. Copy the value from 'name' into 'login'
 login = name;
+
 // 3. Print the value of the 'login' variable to the console
 console.log(login)
 
@@ -65,9 +66,10 @@ let bigAmount = "500";
 let greatAmount = "100000";
 
 greatAmount = greatAmount / 1000
+console.log('Great Amount', greatAmount);
 hugeAmount = `${greatAmount}${bigAmount}`
 hugeAmount = parseInt(hugeAmount)
-console.log(hugeAmount);  // Outputs: 100500
+console.log('Huge Amount', hugeAmount);  // Outputs: 100500
 
 
 // Task 8: Modify the code so that instead of the string values, the length of each string is printed
@@ -249,6 +251,8 @@ let boolean = true;
 //let undefined = undefined;
 let symbol = Symbol();
 
+console.log('String length', string.length)
+
 
 //Ссылочные типы - объект. Ньюанс с const и созданием нового значения через переменную
 
@@ -273,4 +277,6 @@ console.log(typeof string);
 console.log(typeof boolean);
 console.log(typeof symbol);
 console.log(typeof null);
+console.log(typeof myUndefined);
+
 
