@@ -26,7 +26,6 @@ let nameAndPriceNoReturn = products.map(product => ({
 }))
 console.log("New array with only name And Price WITHOUT return: ", nameAndPriceNoReturn)
 
-
 let nameAndPriceFunction = products.map(product => {
     const name = product.name;
     const price = product.price;
