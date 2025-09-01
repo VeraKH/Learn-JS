@@ -1,34 +1,80 @@
-console.log("Practice 1: A basic for loop")
+console.log("TOPIC 1: A basic FOR loop")
 /*
 A "for" loop is a counter-based loop. It specifies the starting point, the ending condition,
 and the step for the counter. The loop runs until the condition becomes false.
 */
-
+console.log("Practice 1: for loop with step 1")
 for (let i=2; i<6; i++) {
     console.log(i)
 };
 
-console.log("Practice 2: Print numbers from 100 down to 1 using a `while` loop")
+console.log("Practice 2: Step is not 1");
+for (let i=0; i<=10; i+=2) {
+    console.log(`${i}*2=`, i*2);
+};
+
+console.log("Practice 3: Skipping initialization");
+let i = 2;
+for (; i<=6; i+=2) {
+    console.log(`${i}+2=`, i+2);
+};
+
+console.log("Practice 4: Skipping step");
+for(let i = 2; i<=8;){
+    console.log(`${i}+2=`, i+2);
+    i+=2
+};
+
+console.log("Practice 5: Infinite loop with break");
+
+for (;;i++){
+    console.log(`${i}+2=`, i+2);
+    if(i===20){
+        break;
+    }
+}
+
+console.log("Practice 6: Infinite loop with continue and break");
+
+for(i=0;i<=20;i+=2){
+    console.log(`${i}+2=`,i);
+    if(i===10){
+        console.log("Here is 10");
+        continue;
+    } else if(i===16){
+        console.log("Here is 16");
+        break;
+    }
+}
+
+console.log("Practice 7: Print numbers from 100 down to 1 using a `while` loop")
 let num2 = 100;
 for (let i =100; i>=1; i--){
     console.log(i);
 }
 
+for (let i=10; i>=0; i--){
+    console.log(i);
+}
+
 // Write a program using a `for` loop that calculates the sum of all numbers from 1 to 50
 // and prints the result.
-console.log("Practice 3: Sum of Numbers");
+console.log("Practice 8: Sum of Numbers");
 let sumTask=0;
-for (let i = 1; i<=50; i++) {
+for (let i = 1; i<=20; i++) {
     sumTask = sumTask + i;
 }
 console.log(sumTask);
 
-console.log("Practice 4: Calculate the factorial of a number (e.g., 5) using a `for` loop");
-// Task 8:
-const num3 = 5;
+console.log("Practice 8: Sum of Numbers-2");
 
-//Create a multiplication table for any number (e.g., 7) using a `for` loop.
-console.log("Practice 5: Multiplication Table");
+let sumNumber = 0;
+for(let i=1; i<=50; i++){
+    sumNumber = sumNumber+i;
+}
+console.log(sumNumber);
+
+console.log("Practice 9: Multiplication Table for 7");
 let multResult = 1;
 const multTo = 7
 for (i = 1; i<=10; i++) {
@@ -36,7 +82,15 @@ for (i = 1; i<=10; i++) {
     console.log(`${i}*${multTo}=${multResult}`);
 }
 
-console.log("Practice 6: Odd numbers only");
+console.log("Practice 10 - Multiplication table for 5 ");
+const multNumber = 5;
+for (let i = 1; i<=10; i++) {
+    let result = multNumber * i;
+    console.log(`${multNumber} * ${i} =`, result);
+}
+
+
+console.log("Practice 10: Odd numbers only");
 let resultTask;
 for (i = 1; i<=20; i++) {
     if (i % 2 !== 0) {
@@ -44,7 +98,7 @@ for (i = 1; i<=20; i++) {
     }
 }
 
-console.log("Practice 7: Calculating the sum of numbers up to a target value")
+console.log("Practice 11: Calculating the sum of numbers up to a target value")
 
 const result = 10;
 let sum = 0;
@@ -54,7 +108,7 @@ for (let i = 1; i<=result; i++){
 console.log("Sum: ", sum);
 
 
-console.log("Practice 8:  Using modulo to find remainders");
+console.log("Practice 11:  Using modulo to find remainders");
 
 let range = 10;
 let resultNew;
@@ -69,12 +123,16 @@ for (let i = 1; i<range; i++) {
         console.log(`The remainder of ${range} divided by ${i} is ${resultNew}`);
 };
 
-console.log("Practice 9 - Multiplication table for 5 ");
-const multNumber = 5;
-for (let i = 1; i<=10; i++) {
-    let result = multNumber * i;
-    console.log(`${multNumber} * ${i} =`, result);
+
+console.log("Practice 8: Calculate the factorial of a number (e.g., 5) using a `for` loop");
+const num3 = 5;
+
+let factorialNumber=1;
+for(let i=1; i<=num3; i++){
+    factorialNumber = factorialNumber*i;
 }
+console.log(factorialNumber);
+
 
 
 console.log("Topic: Break & for. Practice 1");
@@ -134,6 +192,24 @@ for (let day = 1; day<=3; day++) {
     }console.log(`The END of the day ${day}`)
 }
 
+console.log("Topic `Nested Loops`. Practice: 2");
+
+/*У тебя есть школа с 3 классами, в каждом классе 4 ученика.
+Создай вложенный цикл for, чтобы пройтись по каждому классу и каждому ученику.
+Выведи в консоль сообщение: "Class X, Student Y" где X — номер класса, а Y — номер ученика.
+После каждого класса выведи: "End of class X".
+*/
+
+let students = 4;
+let classes = 3;
+
+for(let i = 1; i<=classes; i++){
+    for(let n = 1; n<=students; n++){
+        console.log(`Class ${i}, Student ${n}`)
+    }
+    console.log(`End of class ${i}`)
+}
+
 /*
 Labels allow you to name a loop and use `break` or `continue` statements to control outer loops.
 */
@@ -179,3 +255,5 @@ const num5 = 45;
 const num6 = 8;
 const num7 = 23;
 const num8 = 78;
+
+
