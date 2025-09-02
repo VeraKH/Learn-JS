@@ -48,7 +48,10 @@ function checkAge() {
 checkAge();
 
 console.log("\n2. FUNCTION Expression")
+//функция создаётся как выражение и может быть присвоена переменной,
+//передана как аргумент или возвращена другой функцией.
 
+console.log("Task 1: Sum of two numbers in a function expression")
 functionExpression = function(a, b) {
     sumNumber = a + b;
     console.log("This is from function expression: ", sumNumber)
@@ -56,8 +59,57 @@ functionExpression = function(a, b) {
 
 functionExpression(10,40);
 
+console.log("Task 2: leap years")
+/* ------ Exercise 1 - leapYears
+Create a function that determines whether or not a given year is a leap year.
+Leap years are determined by the following rules:
+Leap years are years divisible by four (like 1984 and 2004) or  divisible by 400 and  100
+However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years).
+(Yes, it's all pretty confusing)
+Hints: use an if statement and && to make sure all the conditions are met properly*/
+
+const leapYears = function(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+        console.log(year, ' is a leap year')
+    } else{
+        console.log(year, ' is not a leap year')
+    }
+
+};
+
+leapYears(2678) // is a leap year: returns true
+leapYears(1985) // is not a leap year: returns false
+
+console.log("Task 3. Polindromes")
+const polindromes = function (str) {
+    let strReverse = str.split('').reverse().join('');
+    console.log(strReverse)
+
+    if (str === str.split('').reverse().join('')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+console.log("Task 4: Fibonacci");
+/* ------ Exercise 2 - Fibonacci
+Create a function that returns a specific member of the Fibonacci sequence:
+A series of numbers in which each number ( Fibonacci number )
+is the sum of the two preceding numbers. In this exercise,
+the Fibonacci sequence used is 1, 1, 2, 3, 5, 8, etc.
+To learn more about Fibonacci sequences, go to: https://en.wikipedia.org/wiki/Fibonacci_sequence */
+
+for (let num = 1; num<=5; num++) {
+    console.log(num);
+}
+
 
 console.log("3. ARROW FUNCTIONS")
+//Arrow Function — это сокращённый синтаксис для написания функций в JavaScript.
+// Создаются с помощью стрелки => и обычно используются там, где нужна короткая функция, например, в колбэках.
 
 const arrowFunctiom = (a, b) => a + b
 
@@ -73,6 +125,8 @@ const arrowFunctionMulti = (a, b) => {
 console.log(arrowFunctionMulti(20, 20));
 
 console.log("5. Callback functions")
+//Callback-функции — это функции, которые передаются как аргументы в другие функции и вызываются там, когда это нужно.
+//Они часто используются для обработки событий, работы с асинхронным кодом и для того, чтобы сделать код более гибким.
 
 function callbackFunction(a,b) {
     return a + b;
@@ -92,60 +146,28 @@ const convertToCelsius = function (temp) {
 
 console.log(convertToCelsius(32));
 
-console.log("7. Polindromes")
-const polindromes = function (str) {
-    let strReverse = str.split('').reverse().join('');
-    console.log(strReverse)
+console.log("TOPIC: Scopes")
+const a = 5;
+let b = 2;
+//
+// function MyFun(){
+//     let b = 10
+//     a = true
+//     console.log(b)
+// }
+//
+// MyFun()
+// console.log(a)
+// console.log(b)
 
-    if (str === str.split('').reverse().join('')) {
-        return true;
-    } else {
-        return false;
+function MyFunNew(){
+    function innerFn(){
+        console.log(a)
     }
+    let b = 10
+    //a = true
+    console.log(a)
+    innerFn()
 }
 
-/* ------ Exercise 1 - leapYears
-Create a function that determines whether or not a given year is a leap year.
-Leap years are determined by the following rules:
-
-Leap years are years
-
-
-divisible by four (like 1984 and 2004) or  divisible by 400 and  100
-
-
-However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years).
-(Yes, it's all pretty confusing)
-Hints
-use an if statement and && to make sure all the conditions are met properly*/
-
-
-
-
-const leapYears = function(year) {
-    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
-        console.log(year, ' is a leap year')
-    } else{
-        console.log(year, ' is not a leap year')
-    }
-
-};
-
-leapYears(2678) // is a leap year: returns true
-leapYears(1985) // is not a leap year: returns false
-
-
-/* ------ Exercise 2 - Fibonacci
-Create a function that returns a specific member of the Fibonacci sequence:
-
-A series of numbers in which each number ( Fibonacci number )
-is the sum of the two preceding numbers. In this exercise,
-the Fibonacci sequence used is 1, 1, 2, 3, 5, 8, etc.
-To learn more about Fibonacci sequences, go to: https://en.wikipedia.org/wiki/Fibonacci_sequence */
-
-
-console.log("Fibonacci");
-
-for (let num = 1; num<=5; num++) {
-    console.log(num);
-}
+MyFunNew()
