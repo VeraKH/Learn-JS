@@ -4,25 +4,17 @@ console.log("1.1 PUSH METHOD\n") //1. push() adds element to the end
 
 let fruitsBasket = ['apple', 'banana', 'pear'];
 let cities = ['Moscow', 'Bratislava', 'Vienna']
-let users = [
-    { name: "Anna", age: 22 },
-    { name: "John", age: 30 }
-];
 
 // Excersice 1
+fruitsBasket.push('mango');
+console.log(fruitsBasket);
+
 let fruitsBasketAdded = fruitsBasket.push('orange');
 console.log("AFTER PUSH - changed array with a new element: ",fruitsBasket);
 console.log("PUSH returns lenth of a changed array, not array: ", fruitsBasketAdded);
 
 // Excersice 2
 console.log("Added one element to the original 'cities' array and it has now lenth:", cities.push('Tomsk'), " and now cities is:", cities);
-
-// Excersice 3 with an array of objects
-let newUser = { name: "Mia", age: 25 };
-let addNewUser = users.push(newUser);
-console.log("Original array with added user:  ", users);
-console.log("Var with push returns the lenth of a changed array:  ", addNewUser);
-
 
 console.log("\n1.2 POP METHOD\n") //1. pop() removes the last element and return this element
 
@@ -36,22 +28,11 @@ let fruitsBasketLenth = fruitsBasket.pop();
 console.log("returns poped element: ", fruitsBasketLenth);
 console.log("returns original array without popped element: ", fruitsBasket);
 
-// Excersice 3
-let popedUser = users.pop();
-console.log("Remove the last object of the array and display it:", popedUser);
-console.log("Array after removing:", users);
-
 console.log("\n1.3 UNSHIFT METHOD\n") // unshift() - adds first element
 
 // Excersice 1
 fruitsBasket.unshift("mango")
 console.log("After adding a first element: ", fruitsBasket);
-
-// Excersice 2
-newUserToStart = {name: "Vera", age: 37};
-console.log("Users lenth after adding to the start: ", users.unshift(newUserToStart));
-console.log("Users after adding to the start: ", users);
-
 
 console.log("\n1.4 SHIFT METHOD\n") // shift() - removes element from the begining and returns removing element
 
@@ -65,33 +46,6 @@ let myNumberArray = [2, 3, 4];
 myNumberArray.shift();
 console.log(myNumberArray);
 
-//Excersice 3 Используй shift() и выведи возраст удалённого пользователя
-
-console.log("Age of the removed user from the begining:", users.shift().age);
-
-console.log("\n1.5 COMBINED Exersice\n") //
-
-//1. Создай пустой массив с названием messages. Добавь в конец массива три объекта.
-//Каждый объект должен содержать текст сообщения и имя отправителя, например: { text: "Привет!", from: "Anna" }
-let message = [];
-message.push({text: "Hello", from: "Anna"}
-);
-message.push({text: "Urgent", from: "Boris"});
-message.push({text: "Invoice", from: "Vera"});
-console.log("Added to the end 3 objects:", message);
-
-//2. Удали последний элемент из массива.
-// Добавь важное сообщение в начало массива.
-
-message.pop();
-console.log("After Popped last object:", message);
-message.unshift({text: "Important!", from: "Dmitrii"})
-
-console.log(message);
-
-//3. Удали первый элемент из массива и выведи в консоль его text.
-removedFirts = message.shift()
-console.log(removedFirts.text)
 
 console.log("\n2.  ARRAY TRANSFORMATION METHODS")
 
