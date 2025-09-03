@@ -8,12 +8,14 @@ console.log("PART 3: FUNCTIONS\n");
 // - Processes them
 // - Returns an output (or performs an action)
 
-console.log("1. DECLARING A FUNCTION")
-// 1. Declaring the function multiply
+console.log("1. DECLARING AND USING A FUNCTION")
+
+console.log("Task 1: multiply function with console inside")// 1. Declaring the function
 function multiplyConsole(a, b) {
-    // Function body
-    console.log("This is a log at the moment of calling the function multiply");
+    console.log("This is a log at the moment of calling the function multiply"); // Function body
 };
+
+console.log("Task 2: multiply function with usage")// 1. Declaring the function
 
 function multiply(a, b) {
     console.log(`This is multiplication function for: ${a} and ${b}`, a*b);
@@ -21,7 +23,10 @@ function multiply(a, b) {
 
 multiply(4, 5);
 
+
 console.log("\nFUNCTION RETURN")
+
+console.log("Task 1: multiply function with return")/
 function multiplyReturn(x, y, z) {
     console.log("Code before return is executed as normal");
 
@@ -31,11 +36,11 @@ function multiplyReturn(x, y, z) {
     console.log("This log will never execute, it is after the return");
 };
 
-multiplyReturn(2, 3, 4);
+//multiplyReturn(2, 3, 4);
 
 // There can be more than one return
 
-console.log("\nFUNCTION with more than one RETURN")
+console.log("\nTask 2: FUNCTION with more than one RETURN")
 function checkAge() {
     let age = 10;
     if (age >= 18) {
@@ -46,6 +51,13 @@ function checkAge() {
 };
 
 checkAge();
+
+console.log("Task 3. Function to convert Fahrenheit to Celsius")
+const convertToCelsius = function (temp) {
+    return (temp - 32) * 5 / 9;
+}
+
+console.log(convertToCelsius(32));
 
 console.log("\n2. FUNCTION Expression")
 //функция создаётся как выражение и может быть присвоена переменной,
@@ -102,9 +114,21 @@ is the sum of the two preceding numbers. In this exercise,
 the Fibonacci sequence used is 1, 1, 2, 3, 5, 8, etc.
 To learn more about Fibonacci sequences, go to: https://en.wikipedia.org/wiki/Fibonacci_sequence */
 
-for (let num = 1; num<=5; num++) {
-    console.log(num);
+function myFibonacci(n){
+    let a = 0;
+    let b = 1;
+
+    if (n >= 1) console.log(a);
+    if (n >= 2) console.log(b);
+
+    for (let i = 3; i<=n; i++){
+        let next = a + b;
+        console.log(next);
+        a = b;
+        b = next;
+    }
 }
+myFibonacci(6);
 
 
 console.log("3. ARROW FUNCTIONS")
@@ -124,9 +148,10 @@ const arrowFunctionMulti = (a, b) => {
 
 console.log(arrowFunctionMulti(20, 20));
 
-console.log("5. Callback functions")
+console.log("5. CALLBACK FUNCTIONS")
 //Callback-функции — это функции, которые передаются как аргументы в другие функции и вызываются там, когда это нужно.
 //Они часто используются для обработки событий, работы с асинхронным кодом и для того, чтобы сделать код более гибким.
+console.log("Task 1: Callback function Syntax and Usage")
 
 function callbackFunction(a,b) {
     return a + b;
@@ -139,12 +164,19 @@ function functionToCallBack(a, b, callbackFunction) {
 let resultCallBack = functionToCallBack(10, 20, callbackFunction);
 console.log(resultCallBack);
 
-console.log("6. Function to convert Fahrenheit to Celsius")
-const convertToCelsius = function (temp) {
-    return (temp - 32) * 5 / 9;
-}
+console.log("Task 2: Callback function Syntax and Usage")
 
-console.log(convertToCelsius(32));
+let myCallback = function (){
+    let greeting = "Hello";
+    return greeting;
+};
+
+let myFunc = function (callback, name){
+    console.log(`${callback()}, ${name}!`);
+};
+
+myFunc(myCallback, "Anna");
+
 
 console.log("TOPIC: Scopes")
 const a = 5;
