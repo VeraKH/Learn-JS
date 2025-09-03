@@ -264,3 +264,44 @@ notOkString = 'Hello World'
 
 console.log("Json safe string:", parseJSONSafe(okString));
 console.log("Not a Json safe string:",parseJSONSafe(notOkString));
+
+//Exersice 2
+// Create a function that uses a switch statement to return different messages based on order status:
+//     "pending" → "Order is being processed"
+//     "completed" → "Order delivered successfully"
+//     "cancelled" → "Order was cancelled"
+//     default → "Unknown status"
+console.log("\nExersice 2: Else-If\n")
+function messageGen(status){
+    if (status === "pending"){
+        console.log("Order is being processed")
+    } else if (status === "completed"){
+        console.log("Order delivered successfully")
+    } else if (status === "cancelled"){
+        console.log("Order was cancelled")
+    } else {
+        console.log("Unknown status")
+    }
+}
+
+messageGen("lkdjfs")
+messageGen("pending")
+
+console.log("\nExersice 2: Switch-Case\n")
+
+let textCase;
+let text = "pending";
+
+switch(text){
+    case "pending":
+        console.log("Order is being processed")
+        break;
+    case "completed":
+        console.log("Order delivered successfully")
+        break;
+    case "cancelled":
+        console.log("Order was cancelled")
+        break;
+    default:
+        console.log("Unknown status")
+}
