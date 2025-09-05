@@ -95,3 +95,18 @@ function studentResult(StudentsData){
 scoreDate = studentResult(studensScores);
 console.log(scoreDate);
 
+
+
+
+
+
+
+
+
+//     "Task 4: Fibonacci"  - попробуй через:
+//     - рекурсия ( как раз ее обсудим)
+
+
+
+
+// Find the first non-repeating character

@@ -123,6 +123,7 @@ let positiveNumbers = numbersToFilter.filter(num => num >= 0);
 console.log("Оставить только положительные числа:", positiveNumbers)
 
 console.log("METHOD: reduce() - creates new array with elements that pass test.")
+//array.reduce(callback(accumulator, currentValue, index, array), initialValue)
 
 //     Current V      Accumulator     Action
 // 1.     1              0             1+0 = 1
@@ -135,6 +136,17 @@ const numbersReduce = [2, 4, 1, 9, 8, 8];
 let newNumbersArray = numbers.reduce((acc, number) => acc + number, 0);
 console.log('Original array:', numbers);
 console.log('Sum of numbers:', newNumbersArray);
+
+
+let word = "moscow";
+let polydrom = '';
+
+for(i = word.length-1; i>=0; i--){
+    polydrom += word[i];
+}
+
+console.log(polydrom);
+
 
 
 

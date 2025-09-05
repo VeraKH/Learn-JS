@@ -177,6 +177,57 @@ let myFunc = function (callback, name){
 
 myFunc(myCallback, "Anna");
 
+console.log("Task 3: Callback Annonimus function")
+
+function newFunc(callback, name){
+    return `${callback()}, ${name}!`
+};
+
+console.log(newFunc(function(){return "Hello"}, "Anna"));
+
+
+console.log("Task 4: Callback Annonimus function + arrow");
+
+function newFunc2(callback, name){
+    return `${callback()}, ${name}!`
+};
+
+console.log(newFunc2(function(){return "Hello"}, "Anna"));
+
+console.log(newFunc2(() => "Hello", "Anna"));
+
+console.log("Task 5: Callback function + array of objects");
+const users = [
+    { id: 1, name: "Anna", age: 25, isActive: true, salary: 2500 },
+    { id: 2, name: "John", age: 32, isActive: false, salary: 4000 },
+    { id: 3, name: "Maria", age: 19, isActive: true, salary: 1800 },
+    { id: 4, name: "David", age: 45, isActive: true, salary: 5200 },
+    { id: 5, name: "Sophia", age: 28, isActive: false, salary: 3100 }
+];
+
+//Фильтрует пользователей по условию из callback
+function filterUsers(users, callback, param) {
+    const result = [];
+    for (let user = 0; user < users.length; user++) {
+        if (callback(users[user], param)) {
+            result.push(users[user]);
+        }
+    }
+    return result;
+}
+
+console.log("Task 6: Callback function call + params");
+function filterByAgeParams(user, minAge){
+    return user.age >= minAge;
+}
+const usersOver25Params = filterUsers(users, filterByAgeParams, 25)
+console.log(usersOver25Params);
+
+console.log("Task 7: Callback function call + arrow functions");
+const usersOver25Arrow = filterUsers(users, user => user.age >= 25); ;
+console.log(usersOver25Arrow);
+
+
 
 console.log("TOPIC: Scopes")
 const a = 5;
@@ -192,14 +243,14 @@ let b = 2;
 // console.log(a)
 // console.log(b)
 
-function MyFunNew(){
-    function innerFn(){
-        console.log(a)
-    }
-    let b = 10
+//function MyFunNew(){
+  //  function innerFn(){
+   //     console.log(a)
+    //}
+    //let b = 10
     //a = true
-    console.log(a)
-    innerFn()
-}
+    //console.log(a)
+    //innerFn()
+//}
 
-MyFunNew()
+//MyFunNew()
