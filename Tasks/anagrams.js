@@ -45,7 +45,6 @@ if (isAnagramFunc(objectOne, objectTwo)) {
     console.log('NOT an anagram');
 }
 
-
 console.log('2. Check if two strings are anagrams with sorting');
 
 function AnagramsSort(anagramOne, anagramTwo){
