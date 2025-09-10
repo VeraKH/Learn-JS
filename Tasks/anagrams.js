@@ -65,6 +65,7 @@ console.log('3. Check if two strings are anagrams with MAP');
 function isAnagramMap(anagramOne, anagramTwo){
     if (anagramOne.length !== anagramTwo.length) return false;
 
+    //Создаём словари (Map), в которых будем хранить: букву как ключ, количество вхождений как значение.
     let mapOne = new Map();
     let mapTwo = new Map();
 
