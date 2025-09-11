@@ -143,7 +143,7 @@ grade = score <=100 ? `A` :
         score <=80 ? `C` : score <=70 ? `D` : F;
 console.log(grade);
 
-console.log("TOPIC 2: SWITCH-CASE")
+console.log("TOPIC 2: SWITCH-CASE") //switch работает с одним значением и сравнивает его с разными вариантами.
 
 console.log("Task 1: Subscription Using SWITCH for multiple conditions")
 let cost4;
