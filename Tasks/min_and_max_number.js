@@ -21,7 +21,7 @@ console.log("2. Минимальное и максимальное число и
 myMax = Math.max(...arr);
 console.log(myMax);
 
-console.log("2. Минимальное и максимальное число из массива - Reduce")
+console.log("3. Минимальное и максимальное число из массива - Reduce")
 let maxReduce = arr.reduce((acc, cur) => cur > acc ? cur : acc, -Infinity);
 let minReduce = arr.reduce((acc, cur) => cur < acc ? cur : acc, Infinity);
 

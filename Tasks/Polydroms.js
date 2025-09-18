@@ -11,6 +11,7 @@ console.log("Task 1. Polindromes: 'for' loop")
 // for(let i=lowerWord.length-1; i>=0; i--){
 //     wordArrayNew.push(lowerWord[i]);
 // }
+
 // for (let i = 0; i<lowerWord.length; i++){
 //     arrayToString += wordArrayNew[i];
 // }

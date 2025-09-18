@@ -55,7 +55,7 @@ function passwordCheckFlags(password) {
 
 }
 
-console.log("2. Checking a password: RegExp")
+console.log("3. Checking a password: RegExp")
 function passwordCheck(password) {
     const lengthCheck = /.{8,}/;
     const digitCheck = /\d/;       // \d → любая цифра

@@ -2,9 +2,10 @@ console.log('1. Check if two strings are anagrams with comparing keys/values');
 let anagramOne = 'Колба'.toLowerCase();
 let anagramTwo = 'бокал'.toLowerCase();
 
-objectOne = {};
-objectTwo = {};
+let objectOne = {};
+let objectTwo = {};
 
+//объект хранит счетчики символов, а цикл просто идёт по символам строки и обновляет объект.
 for (let char of anagramOne){ //
     if (objectOne[char] === undefined){ //  objectOne[char] = (objectOne[char] || 0) +1;
         objectOne[char] = 1;
@@ -35,7 +36,7 @@ function isAnagramFunc(objOne, objTwo){
             return false;
         }
     }
-
+    
     return true;
 }
 
@@ -54,7 +55,7 @@ function AnagramsSort(anagramOne, anagramTwo){
     }
 }
 
-if(isAnagramFunc(anagramOne, anagramTwo)){
+if(AnagramsSort(anagramOne, anagramTwo)){
     console.log('This is anagram');
 } else {
     console.log('NOT an anagram');

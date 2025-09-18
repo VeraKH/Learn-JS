@@ -4,6 +4,7 @@ F₀ = 0
 F₁ = 1
 Fₙ = Fₙ₋₁ + Fₙ₋₂
 */
+
 function fibonacciRecursion(num){
     //Рекурсия работает с конкретными значениями (точные номера чисел)
     if(num === 0) {return num};
@@ -12,12 +13,12 @@ function fibonacciRecursion(num){
     return fibonacciRecursion(num - 1) + fibonacciRecursion(num - 2);
 }
 
-console.log("Task 1.2: Fibonacci recursion - когда нужна вся последовательность");
+console.log("Task 1.1: Fibonacci recursion - когда нужна вся последовательность");
 for(i=0; i<=5; i++){
     console.log(fibonacciRecursion(i));
 }
 
-console.log("Task 1.1: Fibonacci recursion - когда нужна не вся последовательность, а только одно конкретное число.");
+console.log("Task 1.2: Fibonacci recursion - когда нужна не вся последовательность, а только одно конкретное число.");
 console.log(fibonacciRecursion(7));
 
 

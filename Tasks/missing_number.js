@@ -1,4 +1,4 @@
-console.log("1. Find the missing number in an array of 1..N with sorting");
+console.log("!!!!1. Find the missing number in an array of 1..N with sorting");
 
 let arr = [1, 2, 4, 5, 6];
 
@@ -15,7 +15,6 @@ function findMissingNumber(arr) {
             break;
         }
     }
-
 }
 
 findMissingNumber(arr);
